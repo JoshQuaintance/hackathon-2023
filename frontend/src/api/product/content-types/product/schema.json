@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "products"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "unique_id": {
+      "type": "uid"
+    },
+    "arrived": {
+      "type": "datetime"
+    }
+  }
+}
