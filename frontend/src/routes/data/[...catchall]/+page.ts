@@ -12,7 +12,9 @@ export function load({ params }) {
         sscc: 'xA560100F9',
         ai: 'x02',
         gtin: 'x0E192001AF3',
-        all: params.catchall
+        all: params.catchall,
+        // w: ['123', '2341', '32142']
+
 
     };
 

@@ -1,12 +1,19 @@
 <script lang="ts">
-    import type { PageData } from '@sveltejs/kit';
+    import type { PageData } from './$types';
 
     export let data: PageData;
 </script>
 
 <main>
-    <h2>GS1 Tag</h2>
-    <table>
+    <h1>GS1 Tag</h1>
+    <!-- 
+    {#each data.w as w}
+        <p>{w}</p>
+    {/each} -->
+
+    <hr />
+
+    <!-- <table>
         <thead>
             <tr>
                 <th>AI</th>
@@ -21,6 +28,23 @@
                 </td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
     <!-- <script src="script.js"></script> -->
+
+    
+
+
 </main>
+
+<style>
+    table,
+    tr,
+    th,
+    td,
+    caption {
+        border: 1px solid #eee;
+        font-family: 'Courier New', Courier, monospace;
+        border-collapse: collaps;
+        padding: 0.5rem;
+    }
+</style>
