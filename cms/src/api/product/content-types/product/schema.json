@@ -54,6 +54,12 @@
     },
     "name": {
       "type": "string"
+    },
+    "is_recalled": {
+      "type": "boolean"
+    },
+    "is_flagged": {
+      "type": "boolean"
     }
   }
 }
