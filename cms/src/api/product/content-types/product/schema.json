@@ -36,11 +36,6 @@
     "bottle_gtin": {
       "type": "string"
     },
-    "package": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::package.package"
-    },
     "stored_at": {
       "type": "component",
       "repeatable": false,

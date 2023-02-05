@@ -40,11 +40,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product.product"
-    },
-    "packages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::package.package"
     }
   }
 }
