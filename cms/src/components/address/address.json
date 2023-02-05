@@ -17,6 +17,9 @@
     },
     "city": {
       "type": "string"
+    },
+    "zip": {
+      "type": "integer"
     }
   }
 }
