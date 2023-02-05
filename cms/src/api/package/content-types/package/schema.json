@@ -4,7 +4,8 @@
   "info": {
     "singularName": "package",
     "pluralName": "packages",
-    "displayName": "package"
+    "displayName": "package",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,11 @@
     },
     "gtin": {
       "type": "uid"
+    },
+    "ssccs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sscc.sscc"
     }
   }
 }

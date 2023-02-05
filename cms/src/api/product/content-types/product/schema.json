@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "case_gtin": {
-      "type": "biginteger"
-    },
-    "bottle_gtin": {
-      "type": "biginteger"
-    },
     "description": {
       "type": "string"
     },
@@ -44,6 +38,17 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::sscc.sscc"
+    },
+    "case_gtin": {
+      "type": "string"
+    },
+    "bottle_gtin": {
+      "type": "string"
+    },
+    "package": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::package.package"
     }
   }
 }
