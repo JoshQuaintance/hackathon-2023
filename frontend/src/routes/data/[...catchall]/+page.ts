@@ -2,20 +2,32 @@
 // @ts-nocheck
 
 import { error } from '@sveltejs/kit';
+import type { ProductData } from '../../../lib/props/types';
+
+const website = "https://hackathon-frontend-production.up.railway.app/api";
+
 
 /** @type {import('@sveltejs/kit').PageLoad} */
-export function load({ params }) {
-    return {
-        header: 'x7F',
-        aidc: 'x22',
-        filter: 'b010',
-        sscc: 'xA560100F9',
-        ai: 'x02',
-        gtin: 'x0E192001AF3',
-        all: params.catchall,
-        // w: ['123', '2341', '32142']
+export async function load() {
+    /*
+    fetch data from the internet
+    if you're tryin to use GET
+    fetch('website/api/whatyouwanttoget');
 
-
-    };
-
+    fetch('website/data/data', {
+        method: 'POST' (create) | 'PUT' (Updated) 
+    })
+    // */
+    const products = website.concat("/products?populate=*");
+    const response = await fetch(products);
+    // 
+    if (response.status === 400) {
+        throw new Error('Error: Invalid Request');
+    }
+    const json_data = await response.json();
+    console.log(json_data);
+    const firstData: ProductData = json_data.data[0].attributes;
+    // console.log(data);
+    return firstData;
+    // fetch();
 }
