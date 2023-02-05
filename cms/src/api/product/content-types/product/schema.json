@@ -39,6 +39,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::company.company"
+    },
+    "ssccs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sscc.sscc"
     }
   }
 }

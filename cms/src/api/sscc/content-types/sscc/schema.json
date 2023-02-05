@@ -4,7 +4,8 @@
   "info": {
     "singularName": "sscc",
     "pluralName": "ssccs",
-    "displayName": "SSCC"
+    "displayName": "SSCC",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,27 @@
   "attributes": {
     "sscc_number": {
       "type": "biginteger"
+    },
+    "sent": {
+      "type": "datetime"
+    },
+    "arrived": {
+      "type": "datetime"
+    },
+    "from": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "to": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "intermediaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::company.company"
     }
   }
 }
