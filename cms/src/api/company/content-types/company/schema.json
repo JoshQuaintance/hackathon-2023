@@ -17,7 +17,7 @@
     },
     "address": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "address.address"
     },
     "phone": {
