@@ -52,7 +52,7 @@
     },
     "stored_at": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "store-at.store-at"
     }
   }
