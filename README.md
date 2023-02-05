@@ -12,4 +12,4 @@ WRxIGHT is a webapp meant to both store and retrieve all data related to a parti
 
 ## Demo
 
-[WRxIGHT Demo](yt link)
+[WRxIGHT Demo](Presentation.mp4)
