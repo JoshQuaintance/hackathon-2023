@@ -1,11 +1,12 @@
 {
   "collectionName": "components_dose_doses",
   "info": {
-    "displayName": "dose"
+    "displayName": "dose",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "amount": {
+    "dose": {
       "type": "integer"
     },
     "units": {
