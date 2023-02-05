@@ -57,9 +57,14 @@ export async function load({ params }: any) {
             const filtered = keys.filter(k => k.indexOf(identifier.label.toLowerCase()) > -1)
 
             for (const key of filtered) {
+                let padded = p.attributes[key]
+                const fixedLength: number = identifier.value.length;
 
-                console.log(p.attributes[key], identifier.value)
-                if (p.attributes[key] == identifier.value) return p.attributes as ProductData
+                if (fixedLength) {
+                    if (p.attributes[key].length < fixedLength)
+                        padded = '0'.repeat(fixedLength - padded.length) + padded
+                }
+                if (padded == identifier.value) return p.attributes as ProductData
             }
         }
     }
@@ -68,4 +73,8 @@ export async function load({ params }: any) {
 
     return dataFound
 
+}
+
+type StringObject = {
+    [key: string]: number
 }
