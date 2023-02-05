@@ -9,7 +9,7 @@
     "temperature": {
       "type": "float"
     },
-    "Type": {
+    "type": {
       "type": "enumeration",
       "enum": [
         "Fahrenheit",
