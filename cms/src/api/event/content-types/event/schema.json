@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Events"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "event_type": {
+      "type": "enumeration",
+      "enum": [
+        "add"
+      ]
+    },
+    "location": {
+      "type": "string"
+    },
+    "date_arrived": {
+      "type": "datetime"
+    },
+    "date_delivered": {
+      "type": "datetime"
+    },
+    "sscc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sscc.sscc"
+    },
+    "handled_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    }
+  }
+}
