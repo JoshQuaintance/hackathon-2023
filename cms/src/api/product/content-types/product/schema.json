@@ -50,8 +50,10 @@
       "relation": "oneToOne",
       "target": "api::package.package"
     },
-    "temp_stored_at_F": {
-      "type": "float"
+    "stored_at": {
+      "type": "component",
+      "repeatable": true,
+      "component": "store-at.store-at"
     }
   }
 }
