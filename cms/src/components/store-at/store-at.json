@@ -9,8 +9,13 @@
     "temperature": {
       "type": "float"
     },
-    "temperature_type": {
-      "type": "string"
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Fahrenheit",
+        "Celsius",
+        "Kelvin"
+      ]
     }
   }
 }
