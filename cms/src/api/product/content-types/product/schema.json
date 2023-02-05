@@ -55,6 +55,11 @@
     },
     "is_flagged": {
       "type": "boolean"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
     }
   }
 }
