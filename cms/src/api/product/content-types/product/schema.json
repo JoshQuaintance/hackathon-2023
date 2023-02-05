@@ -20,12 +20,6 @@
       "repeatable": false,
       "component": "dose.dose"
     },
-    "number_in_bottle": {
-      "type": "integer"
-    },
-    "unit_of_measure": {
-      "type": "string"
-    },
     "manufacturer": {
       "type": "relation",
       "relation": "oneToOne",
