@@ -20,29 +20,20 @@
       "repeatable": true,
       "component": "address.address"
     },
-    "city": {
-      "type": "string"
-    },
-    "state": {
-      "type": "string"
-    },
-    "zip": {
-      "type": "integer"
-    },
     "phone": {
       "type": "biginteger"
     },
     "email": {
       "type": "email"
     },
-    "company_prefix": {
-      "type": "biginteger"
-    },
     "business_location_gln": {
       "type": "biginteger"
     },
     "dock_gln": {
       "type": "biginteger"
+    },
+    "company_prefix": {
+      "type": "uid"
     }
   }
 }

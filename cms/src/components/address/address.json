@@ -1,7 +1,8 @@
 {
   "collectionName": "components_address_addresses",
   "info": {
-    "displayName": "address"
+    "displayName": "address",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,6 +10,12 @@
       "type": "integer"
     },
     "street_name": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "city": {
       "type": "string"
     }
   }
