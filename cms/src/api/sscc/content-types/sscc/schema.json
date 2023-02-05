@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ssccs",
+  "info": {
+    "singularName": "sscc",
+    "pluralName": "ssccs",
+    "displayName": "SSCC",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sent": {
+      "type": "datetime"
+    },
+    "arrived": {
+      "type": "datetime"
+    },
+    "from": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "to": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "intermediaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::company.company"
+    },
+    "number": {
+      "type": "uid"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "packages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::package.package"
+    }
+  }
+}

@@ -4,24 +4,62 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "products"
+    "displayName": "Product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "description": {
       "type": "string"
     },
+    "Dose": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dose.dose"
+    },
+    "manufacturer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "ssccs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sscc.sscc"
+    },
+    "case_gtin": {
+      "type": "string"
+    },
+    "bottle_gtin": {
+      "type": "string"
+    },
+    "package": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::package.package"
+    },
+    "stored_at": {
+      "type": "component",
+      "repeatable": false,
+      "component": "store-at.store-at"
+    },
     "Quantity": {
-      "type": "integer"
+      "displayName": "Quantity",
+      "type": "component",
+      "repeatable": false,
+      "component": "quantity.quantity"
     },
-    "unique_id": {
-      "type": "uid"
+    "name": {
+      "type": "string"
     },
-    "arrived": {
-      "type": "datetime"
+    "is_recalled": {
+      "type": "boolean"
+    },
+    "is_flagged": {
+      "type": "boolean"
     }
   }
 }

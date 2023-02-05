@@ -179,11 +179,6 @@ export function decodeHexValues(hex_value: string) {
         }
         serial_encoding = parseInt(binary.substring(0, 3), 2);
         binary = binary.substring(3);
-        const { decoded, num_to_subtract } = decoder(
-            serial_encoding,
-            binary
-        );
-        serial_number = decoded,
     }
     // Create elements map
     const gs1_elements = {

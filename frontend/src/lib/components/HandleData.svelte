@@ -51,19 +51,6 @@
     .grid {
         display: grid;
         grid-template-columns: 30% 70%;
-        grid-gap: 0.5em;
-        grid-auto-rows: minmax(25px, auto);
-        justify-content: stretch;
-
-        /* border:#000 5px solid; */
-    }
-
-    .grid-header {
-        grid-column: 1/3;
-        font-weight: bold;
-    }
-
-    .grid > div {
         background: #333;
         padding: 0.5em;
         box-shadow: 3px 3px 0px #000;

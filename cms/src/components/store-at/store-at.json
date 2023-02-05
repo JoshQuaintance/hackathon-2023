@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_store_at_store_ats",
+  "info": {
+    "displayName": "Store At",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "temperature": {
+      "type": "float"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Fahrenheit",
+        "Celsius",
+        "Kelvin"
+      ]
+    }
+  }
+}
