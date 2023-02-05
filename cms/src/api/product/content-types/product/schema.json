@@ -4,24 +4,39 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "products"
+    "displayName": "Product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "case_gtin": {
+      "type": "biginteger"
+    },
+    "bottle_gtin": {
+      "type": "biginteger"
+    },
+    "manufacturer": {
       "type": "string"
     },
-    "Quantity": {
+    "description": {
+      "type": "string"
+    },
+    "Dose": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dose.dose"
+    },
+    "number_in_bottle": {
       "type": "integer"
     },
-    "unique_id": {
-      "type": "uid"
+    "unit_of_measure": {
+      "type": "string"
     },
-    "arrived": {
-      "type": "datetime"
+    "quantity": {
+      "type": "integer"
     }
   }
 }

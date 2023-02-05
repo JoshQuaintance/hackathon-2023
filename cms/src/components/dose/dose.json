@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_dose_doses",
+  "info": {
+    "displayName": "dose"
+  },
+  "options": {},
+  "attributes": {
+    "amount": {
+      "type": "integer"
+    },
+    "units": {
+      "type": "enumeration",
+      "enum": [
+        "mg",
+        "ml",
+        "g",
+        "l"
+      ]
+    }
+  }
+}
