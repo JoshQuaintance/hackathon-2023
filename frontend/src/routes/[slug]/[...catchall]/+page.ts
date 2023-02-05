@@ -14,7 +14,9 @@ export async function load({ params }: any) {
         }
     }
 
-    const digitalLink = "https://clrx.vercel.app/" + params.catchall;
+
+
+    const digitalLink = "https://wrxight.vercel.app/" + params.catchall;
     const gs1dlt = new GS1DigitalLinkToolkit();
 
     const el = gs1dlt.extractFromGS1digitalLink(digitalLink);
@@ -42,14 +44,22 @@ export async function load({ params }: any) {
     let api = identifier.label.toLowerCase();
     if (api == 'gtin') api = 'product'
     const products = `${website}/${api}s?populate=*`;
+
+
+
     const response = await fetch(products);
 
     if (response.status === 400) {
         throw new Error('Error: Invalid Request');
     }
 
+    if (response.status === 500) {
+        throw new Error('Error: Internal Server Error')
+    }
+
     const json_data = await response.json();
     const data = json_data.data;
+
 
     function findew() {
         for (const p of data) {
@@ -69,7 +79,6 @@ export async function load({ params }: any) {
         }
     }
     const dataFound = findew();
-
 
     return dataFound
 

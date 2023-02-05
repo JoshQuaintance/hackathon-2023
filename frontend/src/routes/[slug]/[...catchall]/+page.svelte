@@ -3,16 +3,9 @@
     import HandleData from '$lib/components/HandleData.svelte';
 
     export let data: PageData;
-
-    // let data2 = data.dataFound;
 </script>
 
 <main>
-    <!-- <h1>GS1 Tag</h1> -->
-    <!-- 
-    {#each data.w as w}
-        <p>{w}</p>
-    {/each} -->
 
     <style>
         .container {
