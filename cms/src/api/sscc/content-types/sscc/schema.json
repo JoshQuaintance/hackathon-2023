@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "number": {
-      "type": "biginteger"
-    },
     "sent": {
       "type": "datetime"
     },
@@ -35,6 +32,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::company.company"
+    },
+    "number": {
+      "type": "uid"
     }
   }
 }
