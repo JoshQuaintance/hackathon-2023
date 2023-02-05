@@ -18,9 +18,6 @@
     "bottle_gtin": {
       "type": "biginteger"
     },
-    "manufacturer": {
-      "type": "string"
-    },
     "description": {
       "type": "string"
     },
@@ -37,6 +34,11 @@
     },
     "quantity": {
       "type": "integer"
+    },
+    "manufacturer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
     }
   }
 }
