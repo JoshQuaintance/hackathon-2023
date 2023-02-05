@@ -26,9 +26,6 @@
     "unit_of_measure": {
       "type": "string"
     },
-    "quantity": {
-      "type": "integer"
-    },
     "manufacturer": {
       "type": "relation",
       "relation": "oneToOne",
@@ -54,6 +51,12 @@
       "type": "component",
       "repeatable": false,
       "component": "store-at.store-at"
+    },
+    "Quantity": {
+      "displayName": "Quantity",
+      "type": "component",
+      "repeatable": false,
+      "component": "quantity.quantity"
     }
   }
 }

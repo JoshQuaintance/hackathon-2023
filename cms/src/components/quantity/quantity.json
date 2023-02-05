@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_quantity_quantities",
+  "info": {
+    "displayName": "Quantity"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Each"
+      ]
+    },
+    "qty": {
+      "type": "integer"
+    }
+  }
+}
