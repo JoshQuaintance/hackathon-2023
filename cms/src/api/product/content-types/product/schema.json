@@ -49,6 +49,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::package.package"
+    },
+    "temp_stored_at_F": {
+      "type": "float"
     }
   }
 }
