@@ -8,10 +8,6 @@
     margin: 0;
 }
 
-/* body {
-    @apply dark:bg-gray-900 dark:text-white;
-} */
-
 body {
     font-family: 'TeX Gyre Adventor';
     background-color: #111;

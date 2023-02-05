@@ -11,7 +11,6 @@ export type ProductData = {
 };
 
 export type Dose = {
-    name: keyof Dose;
     dose: number;
     units: string;
 }
@@ -36,5 +35,5 @@ export type SSCC = {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
-    sscc_number: string;
+    number: string;
 }

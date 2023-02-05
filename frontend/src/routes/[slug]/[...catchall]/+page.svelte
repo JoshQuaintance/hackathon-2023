@@ -1,15 +1,12 @@
 <script lang="ts">
     import type { PageData } from './$types';
-    import type { ProductData, Dose } from '$lib/props/types';
     import HandleData from '$lib/components/HandleData.svelte';
 
     export let data: PageData;
 
-    // Do something with this data
-    // console.log(data);
-    /*
-    data. 
-    */
+    console.log(data);
+
+    // let data2 = data.dataFound;
 </script>
 
 <main>
@@ -52,8 +49,23 @@
     </style>
     <div class="container">
         <div class="grid">
-            <div class="grid-header">Product Information</div>
-            <HandleData {data} />
+            {#if data.error}
+                <div class="grid-header">ERROR</div>
+
+                <style>
+                    .grid-header,
+                    .item {
+                        background-color: #e55d41bf !important;
+                    }
+                </style>
+            {:else}
+                <div class="grid-header">Product Information</div>
+            {/if}
+            {#if data === undefined}
+                {''}
+            {:else}
+                <HandleData {data} />
+            {/if}
         </div>
     </div>
 </main>

@@ -1,17 +1,35 @@
-export type ProductData = {
+type defaults = {
     createdAt: string;
     updatedAt: string;
-    quantity: number;
-    case_gtin: number;
-    bottle_gtin: number;
+    publishedAt: string;
+}
+
+export type ProductData = {
+
+    case_gtin: string;
+    bottle_gtin: string;
     description: string;
     dose: Dose;
-    manufacturer: { data: Company };
-    ssccs: { data: [SSCC] }
-};
+    manufacturer: { data: { attributes: Company } };
+    ssccs: { data: [{ attributes: SSCC }] };
+    stored_at: storedAt;
+    Quantity: Quantity
+} & defaults
+
+export type Package = {
+    products: { data: [{ attributes: ProductData }] };
+    gtin: string,
+    ssccs: { data: [{ attributes: SSCC }] }
+} & defaults
+
+export type Quantity = {
+    id: number,
+    qty: number,
+    type: string,
+}
 
 export type Dose = {
-    name: keyof Dose;
+    id: number;
     dose: number;
     units: string;
 }
@@ -28,7 +46,7 @@ export type Company = {
     publishedAt: string;
     phone: string;
     company_prefix_gsius: string;
-}
+} & defaults
 
 export type SSCC = {
     arrived: string;
@@ -36,5 +54,11 @@ export type SSCC = {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
-    sscc_number: string;
+    sscc: string;
+} & defaults
+
+export type storedAt = {
+    id: string;
+    temperature: number;
+    type: string;
 }
