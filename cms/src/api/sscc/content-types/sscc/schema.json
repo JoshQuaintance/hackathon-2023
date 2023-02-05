@@ -33,7 +33,7 @@
       "relation": "oneToMany",
       "target": "api::company.company"
     },
-    "number": {
+    "sscc": {
       "type": "uid"
     },
     "products": {
